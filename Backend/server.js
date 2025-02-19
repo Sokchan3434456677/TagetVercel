@@ -17,7 +17,7 @@ const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true });
 
 // Middleware
 app.use(cors({
-  origin: 'https://targetstore.vercel.app', // Replace with your frontend's IP and port
+  origin: 'https://targetstore.vercel.app/', // Replace with your frontend's IP and port
   credentials: true,
 }));
 app.use(bodyParser.json({ limit: '10mb' }));
