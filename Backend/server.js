@@ -17,7 +17,7 @@ const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true });
 
 // Middleware
 app.use(cors({
-  origin: 'http://192.168.1.14:3000', // Replace with your frontend's IP and port
+  origin: 'http://13.239.136.122:3000', // Replace with your frontend's IP and port
   credentials: true,
 }));
 app.use(bodyParser.json({ limit: '10mb' }));
