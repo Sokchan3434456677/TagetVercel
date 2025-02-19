@@ -1,0 +1,275 @@
+/* Cart.css */
+
+/* General styling for the cart page */
+.cart-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #444;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Styling for the cart items */
+.cart-items {
+  flex: 1;
+  min-width: 60%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.item-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-details {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.item-details h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.size-selection, .color-selection, .quantity-selection {
+  margin: 10px 0;
+}
+
+.size-buttons {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.size-button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.size-button:hover, .size-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-control button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.quantity-control button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.remove-item {
+  padding: 5px 10px;
+  border: none;
+  background-color: #ff6f61;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.remove-item:hover {
+  background-color: #ff4a3a;
+}
+
+.item-total {
+  font-weight: bold;
+  color: #555;
+  margin-left: 10px;
+}
+
+/* Styling for the order summary */
+.cart-summary {
+  flex: 0 0 35%;
+  min-width: 300px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.summary-details {
+  margin-bottom: 20px;
+}
+
+/* Styling for the KHQR payment image */
+.khqr-payment img {
+  display: block;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Styling for the checkout form */
+.checkout-form .form-group {
+  margin-bottom: 15px;
+}
+
+.checkout-form input,
+.checkout-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.image-preview img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.submit-image-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-image-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-image-button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+/* Styling for the cart actions */
+.cart-actions button {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cart-actions button:hover {
+  background-color: #0056b3;
+}
+
+.cart-actions .download-button {
+  background-color: #ffc107;
+}
+
+.cart-actions .download-button:hover {
+  background-color: #e0a800;
+}
+
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Clean toast styling */
+.custom-toast {
+  animation: slideIn 0.3s ease-out;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.custom-toast img {
+  width: 60px; /* Adjust the size of the image */
+  height: 60px;
+  margin-bottom: 15px;
+  border-radius: 50%; /* Optional: Makes the image circular */
+}
+
+.custom-toast h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4CAF50; /* Green color for the heading */
+}
+
+.custom-toast p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #666666;
+}
+
+.custom-toast button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.custom-toast button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
