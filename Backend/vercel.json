@@ -5,17 +5,9 @@
       {
         "src": "server.js",
         "use": "@vercel/node"
-      },
-      {
-        "src": "TelegramServer.js",
-        "use": "@vercel/node"
       }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/TelegramServer.js"
-      },
       {
         "src": "/(.*)",
         "dest": "/server.js"
