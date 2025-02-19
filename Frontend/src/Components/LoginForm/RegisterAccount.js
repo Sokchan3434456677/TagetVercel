@@ -42,8 +42,8 @@ const AuthForm = () => {
 
     try {
       const endpoint = isSignIn
-        ? "http://localhost:5001/api/login"
-        : "http://localhost.1:5001/api/register";
+        ? "https://login-user-six.vercel.app/api/login"
+        : "https://login-user-six.vercel.app/api/register";
 
       const payload = isSignIn
         ? { email: formData.email, password: formData.password }
