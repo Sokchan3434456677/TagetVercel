@@ -26,7 +26,7 @@ const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true });
 const cors = require('cors');
 
 app.use(cors({
-  origin: ['https://targetstore.vercel.app'], // Ensure this is correctly set
+  origin: 'https://targetstore.vercel.app', // Ensure this is correctly set
   credentials: true,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: 'Content-Type,Authorization'
