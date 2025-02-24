@@ -15,12 +15,23 @@ const TELEGRAM_BOT_TOKEN = '7831591330:AAEwY4GlaMydwwfhDxAfULP2xbNRj1vU4S0';
 // const TELEGRAM_BOT_TOKEN = '7118759054:AAGf2efyU0Eq7yZkPqKzjIiDkqQjdVXluOM';
 const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true });
 
-// Middleware
+// // Middleware
+// app.use(cors({
+//   origin: 'https://targetstore.vercel.app', // Replace with your frontend's IP and port
+//   credentials: true,
+// }));
+// app.use(bodyParser.json({ limit: '10mb' }));
+
+
+const cors = require('cors');
+
 app.use(cors({
-  origin: 'https://targetstore.vercel.app', // Replace with your frontend's IP and port
+  origin: ['https://targetstore.vercel.app'], // Ensure this is correctly set
   credentials: true,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: 'Content-Type,Authorization'
 }));
-app.use(bodyParser.json({ limit: '10mb' }));
+
 
 // Connect to MongoDB Atlas
 const MONGODB_URI = 'mongodb+srv://sokchanear0:2NtjcG3hRPMTrYCz@cluster0.1nfjw.mongodb.net/chat_db?retryWrites=true&w=majority&appName=Cluster0';
